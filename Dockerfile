@@ -2,8 +2,12 @@ FROM node:20
 
 WORKDIR /usr/src/app
 
-EXPOSE 5000
+COPY package*.json ./
 
-CMD ["npm", "install"]
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
 
 CMD [ "node", "app.js" ]
