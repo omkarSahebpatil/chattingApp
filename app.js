@@ -7,7 +7,7 @@ app.get("/", (req,res)=>{
     res.sendFile("/index.html", {root: __dirname});
 })
 
-let port = process.env.PORT || 5000;
+let port = process.env.PORT || 3000;
 
 let Server = app.listen(port, () =>{
     console.log("listening to port "+port);
