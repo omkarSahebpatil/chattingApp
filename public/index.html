@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chatting</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="img">
+        <img src="./chat.png" alt="" />
+      </div>
+      <h1>CHATTING SOFTWARE</h1>
+    </div>
+
+    <div class="middle-cont">
+      <div class="msg">
+      </div>
+    </div>
+    <div class="clearAll">Clear All</div>
+    <div class="inputs">
+      <input type="text" placeholder="Type the Massage" />
+    
+      <button>send</button>
+    </div>
+    <script
+      src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+      integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let socket = io.connect("http://localhost:5000");
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
